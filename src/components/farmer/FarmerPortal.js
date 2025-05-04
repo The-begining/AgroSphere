@@ -10,10 +10,6 @@ import {
   Tab,
   TextField,
   Button,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
   Stepper,
   Step,
   StepLabel,
@@ -24,6 +20,7 @@ import {
   ListItemIcon,
   Divider,
   Chip,
+  MenuItem,
 } from '@mui/material';
 import {
   Agriculture as CropIcon,
