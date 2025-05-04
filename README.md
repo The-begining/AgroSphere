@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# AgroSphere
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+AgroSphere is a comprehensive agricultural platform designed to empower farmers, suppliers, and researchers with real-time data, expert insights, and management tools. The platform provides weather intelligence, market trends, crop management, and more, all in a modern, user-friendly web application.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Authentication**: Secure login and registration for different user roles (farmer, supplier, researcher).
+- **Personalized Dashboards**: Custom dashboards for each user type.
+- **Weather Intelligence**: Real-time weather updates and 5-day forecasts based on location or city search.
+- **Market Trends**: Live commodity prices and trend analysis.
+- **Expert Insights**: Access to expert articles, Q&A, and research publications.
+- **Farmer Portal**: Crop management, soil and irrigation tracking, and actionable insights.
+- **Research Dashboard**: Data analysis, forecasting, and publication tools for researchers.
+- **Supplier Portal**: Manage and showcase agricultural supplies.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React.js, Material-UI (MUI), Chart.js
+- **Routing**: React Router
+- **State Management**: React Context API
+- **Forms & Validation**: Formik, Yup
+- **APIs**: OpenWeatherMap (for weather data)
+- **Authentication**: Mock authentication (can be replaced with Firebase/Auth0)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```
+agrosphere/
+├── src/
+│   ├── components/
+│   ├── context/
+│   ├── assets/
+│   ├── utils/
+│   ├── services/
+│   ├── hooks/
+│   ├── App.js
+│   └── ...
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Main Components
 
-### `npm run build`
+### Layout & Navigation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Navbar**: Top navigation bar with links to all main sections and authentication actions.
+- **Footer**: Bottom section with copyright and links.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Authentication
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Login**: User login form with validation.
+- **Register**: User registration form with validation.
+- **AuthContext**: Provides authentication state and logic across the app.
 
-### `npm run eject`
+### Home & Dashboard
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Home**: Landing page with hero section and feature highlights.
+- **Dashboard**: Personalized dashboard with quick actions and recent activity for logged-in users.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Weather
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **WeatherDashboard**: Allows users to search weather by city or use their location, shows current weather, 5-day forecast, and a temperature trend chart.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Market
 
-## Learn More
+- **MarketTrends**: Displays real-time commodity prices, trends, and a price chart for key crops.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Expert
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **ExpertInsights**: Blog posts, seasonal forecasts, and Q&A section for expert advice and research articles.
 
-### Code Splitting
+### Farmer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **FarmerPortal**: Multi-step form for crop management, soil and irrigation tracking, and actionable insights. Includes tabs for crop management and insights.
 
-### Analyzing the Bundle Size
+### Research
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **ResearchDashboard**: Data analysis, forecasting, and publication tools for researchers, including charts and dataset management.
 
-### Making a Progressive Web App
+### Supplier
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **SupplierPortal**: Portal for suppliers to manage and showcase agricultural supplies and offers.
 
-### Advanced Configuration
+### Common/Utility
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **FeaturesSection, DataSection, MarketplaceSection, HeroSection**: Reusable sections for the Home page and other feature highlights.
+- **mockData.js**: Contains mock data for development and testing.
 
-### Deployment
+## Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Prerequisites
 
-### `npm run build` fails to minify
+- Node.js (v16+ recommended)
+- npm
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+   cd agrosphere
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the App
+
+```bash
+npm start
+```
+
+The app will run at [http://localhost:3000](http://localhost:3000) (or another port if 3000 is in use).
+
+### Environment Variables
+
+- For weather features, you need an OpenWeatherMap API key. This is currently hardcoded in the project, but you can move it to a `.env` file for security:
+  ```env
+  REACT_APP_OPENWEATHER_API_KEY=your_api_key_here
+  ```
+
+## Usage
+
+- Register as a user (farmer, supplier, or researcher).
+- Log in to access your personalized dashboard.
+- Use the navigation bar to access features like Weather, Market Trends, Expert Insights, Farmer Portal, etc.
+- For weather, search by city or use your current location for real-time updates and forecasts.
+
+## Contribution
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+- [OpenWeatherMap](https://openweathermap.org/)
+- [Unsplash](https://unsplash.com/) for free images
+- [Material-UI](https://mui.com/)
+- [Chart.js](https://www.chartjs.org/)
