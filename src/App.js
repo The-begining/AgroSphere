@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { ThemeProvider, createTheme, Box, Container } from '@mui/material';
+import { ThemeProvider, createTheme, Box } from '@mui/material';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-import Home from './components/home/Home';
+import Home from './components/Home';
 import Dashboard from './components/dashboard/Dashboard';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
@@ -50,70 +50,68 @@ const App = () => {
           <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
             <Navbar />
             <Box component="main" sx={{ flexGrow: 1 }}>
-              <Container maxWidth="lg" sx={{ py: 4 }}>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/register" element={<Register />} />
-                  <Route
-                    path="/dashboard"
-                    element={
-                      <ProtectedRoute>
-                        <Dashboard />
-                      </ProtectedRoute>
-                    }
-                  />
-                  <Route
-                    path="/weather"
-                    element={
-                      <ProtectedRoute>
-                        <WeatherDashboard />
-                      </ProtectedRoute>
-                    }
-                  />
-                  <Route
-                    path="/market-trends"
-                    element={
-                      <ProtectedRoute>
-                        <MarketTrends />
-                      </ProtectedRoute>
-                    }
-                  />
-                  <Route
-                    path="/expert-insights"
-                    element={
-                      <ProtectedRoute>
-                        <ExpertInsights />
-                      </ProtectedRoute>
-                    }
-                  />
-                  <Route
-                    path="/farmer-portal"
-                    element={
-                      <ProtectedRoute>
-                        <FarmerPortal />
-                      </ProtectedRoute>
-                    }
-                  />
-                  <Route
-                    path="/research"
-                    element={
-                      <ProtectedRoute>
-                        <ResearchDashboard />
-                      </ProtectedRoute>
-                    }
-                  />
-                  <Route
-                    path="/supplier-portal"
-                    element={
-                      <ProtectedRoute>
-                        <SupplierPortal />
-                      </ProtectedRoute>
-                    }
-                  />
-                  <Route path="*" element={<Navigate to="/" />} />
-                </Routes>
-              </Container>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route
+                  path="/dashboard"
+                  element={
+                    <ProtectedRoute>
+                      <Dashboard />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/weather"
+                  element={
+                    <ProtectedRoute>
+                      <WeatherDashboard />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/market-trends"
+                  element={
+                    <ProtectedRoute>
+                      <MarketTrends />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/expert-insights"
+                  element={
+                    <ProtectedRoute>
+                      <ExpertInsights />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/farmer-portal"
+                  element={
+                    <ProtectedRoute>
+                      <FarmerPortal />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/research"
+                  element={
+                    <ProtectedRoute>
+                      <ResearchDashboard />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/supplier-portal"
+                  element={
+                    <ProtectedRoute>
+                      <SupplierPortal />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route path="*" element={<Navigate to="/" />} />
+              </Routes>
             </Box>
             <Footer />
           </Box>
