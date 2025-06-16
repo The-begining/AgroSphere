@@ -17,13 +17,13 @@ const features = [
     title: 'Seamless Reporting Tools',
     description: 'Easy integration with national and EU-level compliance systems.',
     icon: <ReportingIcon sx={{ fontSize: 40, color: 'primary.main', mb: 2 }} />,
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+    image: '/reporting icon.jpeg',
   },
   {
     title: 'Collaboration Engine',
     description: 'Bringing farmers, researchers, and authorities together on one unified platform.',
     icon: <CollaborationIcon sx={{ fontSize: 40, color: 'primary.main', mb: 2 }} />,
-    image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+    image: '/colab_1.jpg',
   },
 ];
 

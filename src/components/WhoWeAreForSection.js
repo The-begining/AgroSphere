@@ -19,7 +19,7 @@ const WhoWeAreForSection = () => {
       title: 'Researchers',
       description: 'Access field-level data to validate and accelerate your studies.',
       icon: <ResearcherIcon sx={{ fontSize: 40, color: 'primary.main', mb: 2 }} />,
-      image: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      image: '/agro_researcher.jpeg',
     },
     {
       title: 'Governments',
