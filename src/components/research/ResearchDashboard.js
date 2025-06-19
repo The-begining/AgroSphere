@@ -35,20 +35,6 @@ const ResearchDashboard = () => {
     setActiveTab(newValue);
   };
 
-  // Mock data - replace with actual API calls
-  const researchData = {
-    soilAnalysis: {
-      labels: ['2019', '2020', '2021', '2022', '2023'],
-      acidity: [6.2, 6.0, 5.8, 5.6, 5.4],
-      organicMatter: [2.1, 2.3, 2.5, 2.7, 2.9],
-    },
-    yieldPrediction: {
-      labels: ['2024', '2025', '2026', '2027', '2028'],
-      wheat: [3.2, 3.4, 3.6, 3.8, 4.0],
-      rice: [4.0, 4.2, 4.4, 4.6, 4.8],
-    },
-  };
-
   const publications = [
     {
       id: 1,
