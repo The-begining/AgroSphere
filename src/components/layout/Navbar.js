@@ -38,8 +38,7 @@ const Navbar = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography
-          variant="h6"
+        <Box
           component={RouterLink}
           to="/"
           sx={{
@@ -48,10 +47,26 @@ const Navbar = () => {
             color: 'inherit',
             display: 'flex',
             alignItems: 'center',
+            gap: 2,
           }}
         >
-          AgroSphere
-        </Typography>
+          <img 
+            src="/sidge_logo.png" 
+            alt="Sidge Logo" 
+            style={{ 
+              height: '40px',
+              width: 'auto'
+            }} 
+          />
+          <Typography
+            variant="h6"
+            sx={{
+              color: 'inherit',
+            }}
+          >
+            Sidge
+          </Typography>
+        </Box>
 
         <Box sx={{ display: 'flex', gap: 2 }}>
           {currentUser ? (

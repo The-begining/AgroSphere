@@ -19,10 +19,22 @@ import SupplierPortal from './components/supplier/SupplierPortal';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#2e7d32', // Green
+      main: '#FF4B12', // Vibrant orange from the monk's robe
+      light: '#FF6B3D',
+      dark: '#CC3A0E',
     },
     secondary: {
-      main: '#ffa000', // Amber
+      main: '#D32F2F', // Deep red from the monk's kasaya
+      light: '#E57373',
+      dark: '#B71C1C',
+    },
+    background: {
+      default: '#FFF8F6', // Very light orange tint for background
+      paper: '#FFFFFF',
+    },
+    text: {
+      primary: '#2C1810', // Dark brown for better readability
+      secondary: '#5D4037',
     },
   },
   typography: {
@@ -32,6 +44,36 @@ const theme = createTheme({
     },
     h2: {
       fontWeight: 600,
+    },
+    button: {
+      textTransform: 'none', // More modern look
+    },
+  },
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#D32F2F', // Deep red for the app bar
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        containedPrimary: {
+          backgroundColor: '#FF4B12',
+          '&:hover': {
+            backgroundColor: '#CC3A0E',
+          },
+        },
+        outlinedPrimary: {
+          borderColor: '#FF4B12',
+          color: '#FF4B12',
+          '&:hover': {
+            borderColor: '#CC3A0E',
+            backgroundColor: 'rgba(255, 75, 18, 0.04)',
+          },
+        },
+      },
     },
   },
 });

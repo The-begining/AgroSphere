@@ -27,7 +27,6 @@ import {
   Timeline as TimelineIcon,
   Publish as PublishIcon,
 } from '@mui/icons-material';
-import Plot from 'react-plotly.js';
 
 const ResearchDashboard = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -112,32 +111,7 @@ const ResearchDashboard = () => {
                     <Typography variant="h6" gutterBottom>
                       Soil Analysis Trends
                     </Typography>
-                    <Plot
-                      data={[
-                        {
-                          x: researchData.soilAnalysis.labels,
-                          y: researchData.soilAnalysis.acidity,
-                          type: 'scatter',
-                          mode: 'lines+markers',
-                          name: 'Soil Acidity (pH)',
-                          line: { color: '#388e3c' },
-                        },
-                        {
-                          x: researchData.soilAnalysis.labels,
-                          y: researchData.soilAnalysis.organicMatter,
-                          type: 'scatter',
-                          mode: 'lines+markers',
-                          name: 'Organic Matter (%)',
-                          line: { color: '#ffa000' },
-                        },
-                      ]}
-                      layout={{
-                        title: 'Soil Quality Trends (2019-2023)',
-                        xaxis: { title: 'Year' },
-                        yaxis: { title: 'Value' },
-                        height: 400,
-                      }}
-                    />
+                    <Typography variant="body2" color="text.secondary">Plot visualization removed.</Typography>
                   </Box>
                 )}
 
@@ -146,32 +120,7 @@ const ResearchDashboard = () => {
                     <Typography variant="h6" gutterBottom>
                       Crop Yield Predictions
                     </Typography>
-                    <Plot
-                      data={[
-                        {
-                          x: researchData.yieldPrediction.labels,
-                          y: researchData.yieldPrediction.wheat,
-                          type: 'scatter',
-                          mode: 'lines+markers',
-                          name: 'Wheat (tonnes/ha)',
-                          line: { color: '#388e3c' },
-                        },
-                        {
-                          x: researchData.yieldPrediction.labels,
-                          y: researchData.yieldPrediction.rice,
-                          type: 'scatter',
-                          mode: 'lines+markers',
-                          name: 'Rice (tonnes/ha)',
-                          line: { color: '#ffa000' },
-                        },
-                      ]}
-                      layout={{
-                        title: 'Crop Yield Forecast (2024-2028)',
-                        xaxis: { title: 'Year' },
-                        yaxis: { title: 'Yield (tonnes/ha)' },
-                        height: 400,
-                      }}
-                    />
+                    <Typography variant="body2" color="text.secondary">Plot visualization removed.</Typography>
                   </Box>
                 )}
 

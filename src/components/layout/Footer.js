@@ -9,10 +9,8 @@ const Footer = () => {
         py: 3,
         px: 2,
         mt: 'auto',
-        backgroundColor: (theme) =>
-          theme.palette.mode === 'light'
-            ? theme.palette.grey[200]
-            : theme.palette.grey[800],
+        backgroundColor: '#D32F2F', // Deep red background
+        color: 'white',
       }}
     >
       <Container maxWidth="lg">
@@ -24,17 +22,17 @@ const Footer = () => {
             alignItems: 'center',
           }}
         >
-          <Typography variant="body2" color="text.secondary">
-            © {new Date().getFullYear()} AgroSphere. All rights reserved.
+          <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+            © {new Date().getFullYear()} Sidge. All rights reserved.
           </Typography>
           <Box sx={{ display: 'flex', gap: 2, mt: { xs: 2, sm: 0 } }}>
-            <Link href="#" color="inherit" underline="hover">
+            <Link href="#" sx={{ color: 'rgba(255, 255, 255, 0.9)' }} underline="hover">
               Privacy Policy
             </Link>
-            <Link href="#" color="inherit" underline="hover">
+            <Link href="#" sx={{ color: 'rgba(255, 255, 255, 0.9)' }} underline="hover">
               Terms of Service
             </Link>
-            <Link href="#" color="inherit" underline="hover">
+            <Link href="#" sx={{ color: 'rgba(255, 255, 255, 0.9)' }} underline="hover">
               Contact Us
             </Link>
           </Box>

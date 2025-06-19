@@ -29,16 +29,16 @@ const HeroSection = () => {
           backgroundImage: `url(${HERO_BG})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          opacity: 0.7,
+          opacity: 0.85,
           zIndex: 0,
         },
-        background: 'rgba(0,0,0,0.3)',
+        background: 'linear-gradient(45deg, rgba(211, 47, 47, 0.7), rgba(255, 75, 18, 0.7))',
       }}
     >
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, display: 'flex', justifyContent: 'center' }}>
         <Box
           sx={{
-            background: 'rgba(0,0,0,0.65)',
+            background: 'rgba(44, 24, 16, 0.75)',
             borderRadius: 4,
             px: { xs: 1, sm: 2, md: 6 },
             py: { xs: 2, sm: 3, md: 6 },
@@ -46,6 +46,7 @@ const HeroSection = () => {
             maxWidth: 900,
             width: '100%',
             textAlign: 'center',
+            border: '1px solid rgba(255, 75, 18, 0.3)',
           }}
         >
           <Typography
@@ -60,7 +61,7 @@ const HeroSection = () => {
               textShadow: '0 2px 8px rgba(0,0,0,0.7)'
             }}
           >
-            Revolutionizing Farming for a Smarter, Greener Planet
+            Sidge: Revolutionizing Farming for a Smarter, Greener Planet
           </Typography>
           <Typography
             variant="h5"
