@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography, Container, Button, Stack } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-const HERO_BG = process.env.PUBLIC_URL + '/AgTech.png';
+const HERO_BG = process.env.PUBLIC_URL + '/hero%20section.png';
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -29,10 +29,9 @@ const HeroSection = () => {
           backgroundImage: `url(${HERO_BG})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          opacity: 0.85,
+          opacity: 0.9,
           zIndex: 0,
-        },
-        background: 'linear-gradient(45deg, rgba(211, 47, 47, 0.7), rgba(255, 75, 18, 0.7))',
+        }
       }}
     >
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, display: 'flex', justifyContent: 'center' }}>
