@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
 import { ThemeProvider, createTheme, Box } from '@mui/material';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Navbar from './components/layout/Navbar';
@@ -14,6 +14,7 @@ import ExpertInsights from './components/expert/ExpertInsights';
 import FarmerPortal from './components/farmer/FarmerPortal';
 import ResearchDashboard from './components/research/ResearchDashboard';
 import SupplierPortal from './components/supplier/SupplierPortal';
+import WeatherYieldDashboard from './components/WeatherYieldDashboard';
 
 // Create theme
 const theme = createTheme({
@@ -92,6 +93,10 @@ const App = () => {
           <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
             <Navbar />
             <Box component="main" sx={{ flexGrow: 1 }}>
+              <div style={{ padding: '1rem', background: '#f5f5f5' }}>
+                <Link to="/" style={{ marginRight: 16 }}>Home</Link>
+                <Link to="/weather-yield">Weather & Yield Dashboard</Link>
+              </div>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
@@ -152,6 +157,7 @@ const App = () => {
                     </ProtectedRoute>
                   }
                 />
+                <Route path="/weather-yield" element={<WeatherYieldDashboard />} />
                 <Route path="*" element={<Navigate to="/" />} />
               </Routes>
             </Box>
