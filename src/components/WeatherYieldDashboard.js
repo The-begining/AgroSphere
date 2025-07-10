@@ -45,7 +45,6 @@ const WeatherYieldDashboard = () => {
   const [data, setData] = useState(null);
   const [soil, setSoil] = useState(null);
   const [ndviUrl, setNdviUrl] = useState(null);
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [geoLoading, setGeoLoading] = useState(false);
   const [locLoading, setLocLoading] = useState(false);
@@ -105,7 +104,6 @@ const WeatherYieldDashboard = () => {
   };
 
   const fetchData = async () => {
-    setLoading(true);
     setError(null);
     setData(null);
     setSoil(null);
@@ -137,7 +135,6 @@ const WeatherYieldDashboard = () => {
     } catch (e) {
       setError('Failed to fetch data.');
     }
-    setLoading(false);
   };
 
   const selectedLayerObj = FAO_LAYERS.find(l => l.key === selectedLayer);
